@@ -1,0 +1,2 @@
+<p *ngIf="(loadingStatus$ | async) != 0 && !(isAuthenticated$ | async)">Login Failed, Try Again</p>
+<button mat-raised-button (click)="login()" [disabled]="(loadingStatus$ | async) == 1">Login</button>
